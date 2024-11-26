@@ -1045,3 +1045,61 @@ Guid
 ----
 d62d84e8-0712-4db0-9af8-c70cabd6c032
 ```
+## Rest-APi
+### Invoke-RestMethod Syntax
+```PowerShell
+Invoke-RestMethod -Uri <URI> -Method <HTTPMethod> -Headers <Hashtable> -Body <Body>
+```
+### Post API
+```PowerShell
+$uri="https://jsonplaceholder.typicode.com/posts"
+$data=@{
+   
+    title="Tomar"
+    body="Saurabh Singh"
+    userId=2
+} | ConvertTo-Json
+
+$response = Invoke-RestMethod -Uri $uri -Method Post -ContentType "application/json" -Body $data
+Write-Output $response
+
+## Output -:
+title userId body           id
+----- ------ ----           --
+Tomar      2 Saurabh Singh 101
+```
+
+### Get
+```PowerShell
+$uri="https://jsonplaceholder.typicode.com/posts/2"
+$response=Invoke-RestMethod -Uri $uri -Method Get
+Write-Output $response
+
+# Output ->
+userId id title        body
+------ -- -----        ----
+     1  2 qui est esse est rerum tempore vitae…
+```
+### Put 
+```PowerShell
+$uri="https://jsonplaceholder.typicode.com/posts/2"
+$data=@{
+   
+    title="Tomar"
+    body="Saurabh Singh"
+    userId=2
+} | ConvertTo-Json
+
+$response=Invoke-RestMethod -Uri $uri -Method Put -ContentType "application/json" -Body $data
+Write-Output $response
+# OutPut ->
+body          title userId id
+----          ----- ------ --
+Saurabh Singh Tomar      2  2
+```
+
+### Delete
+```PowerShell
+$uri="https://jsonplaceholder.typicode.com/posts/2"
+$response=Invoke-RestMethod -Uri $uri -Method Delete
+```
