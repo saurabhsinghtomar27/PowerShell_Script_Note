@@ -1,0 +1,25 @@
+SAURABHSINGH-CB
+Microsoft Windows 11 Pro
+AzureAD\SaurabhSingh
+fe80::3e39:2957:87b8:6314%50
+fe80::e26a:77a2:e623:c0ef%22
+fe80::a669:a3e7:23:a74a%5
+fe80::ee8b:a0:de8f:baeb%17
+fe80::5319:f459:51a1:a6ff%13
+fe80::3eaf:bf17:4d3c:274b%18
+::1
+172.26.176.1
+172.19.64.1
+169.254.76.235
+169.254.25.171
+192.168.10.116
+169.254.60.54
+127.0.0.1
+
+Name                      InterfaceDescription                    ifIndex Status       MacAddress             LinkSpeed
+----                      --------------------                    ------- ------       ----------             ---------
+Ethernet                  Intel(R) Ethernet Connection (18) I219…      18 Disconnected 10-98-19-BB-4F-2F          0 bps
+vEthernet (WSL (Hyper-V … Hyper-V Virtual Ethernet Adapter #2          50 Up           00-15-5D-6D-D5-D3        10 Gbps
+vEthernet (Default Switc… Hyper-V Virtual Ethernet Adapter             22 Up           00-15-5D-C9-8B-B2        10 Gbps
+Wi-Fi                     Intel(R) Wi-Fi 6E AX211 160MHz               13 Up           A8-59-5F-C0-C0-D8        29 Mbps
+
