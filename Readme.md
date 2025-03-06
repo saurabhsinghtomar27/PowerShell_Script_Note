@@ -1108,3 +1108,14 @@ $response=Invoke-RestMethod -Uri $uri -Method Delete
 Get-Process | Select Name, @{name="ID!";exp={"Saurabh"}} -First 5 # Used to create new Column in a table
 "A","B","C","D","A","B" | Select-Object -Unique  # ABCD
 ```
+## Parallel UseCase
+```powershell
+$Array = 1..15
+
+
+    $Array | ForEach-Object -Parallel{
+      Write-Output "Entering $_"
+      Start-Sleep -Seconds 1
+      Write-Output "Exiting $_"
+    } -ThrottleLimit 15 # no of thread that can execute
+```
