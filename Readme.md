@@ -1103,3 +1103,8 @@ Saurabh Singh Tomar      2  2
 $uri="https://jsonplaceholder.typicode.com/posts/2"
 $response=Invoke-RestMethod -Uri $uri -Method Delete
 ```
+## Select-Object UseCases -:
+```powershell
+Get-Process | Select Name, @{name="ID!";exp={"Saurabh"}} -First 5 # Used to create new Column in a table
+"A","B","C","D","A","B" | Select-Object -Unique  # ABCD
+```
